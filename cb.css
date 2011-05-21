@@ -1,0 +1,14 @@
+#chat {
+	margin: 10px auto;
+	background: #EFEFEF;
+	border: 1px solid #AAF;
+	padding: 10px;
+}
+
+.chatline {
+	text-decoration: italics;
+}
+
+.author {
+	font-weight: bold;
+}
