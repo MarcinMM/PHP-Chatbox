@@ -11,7 +11,7 @@ if (isset($_POST) && isset($_POST['author']) && (strlen($_POST['author']) > 0) &
 	$jsonAr[] = $chat;
 }
 
-$jsonAr = array_slice($jsonAr, sizeof($jsonAr) - 30);
+$jsonAr = array_slice($jsonAr, sizeof($jsonAr) - 50);
 
 file_put_contents("chat.json", json_encode($jsonAr));
 
