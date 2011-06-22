@@ -1,5 +1,7 @@
 $(window).load(function() {
 
+$('#chatResults').css("height", $(window).height() - 120);
+
 var focusFlag = 1;
 var lastTime = '';
 var newTime = '';
@@ -41,6 +43,7 @@ $.ajax({
         if (focusFlag == 0) {
 		document.title = "Update!";
 	}
+        $('#chatResults').prop('scrollTop', $('#chatResults').prop('scrollHeight'));
    }
  });
 }
@@ -60,6 +63,7 @@ $.ajax({
 	if ((focusFlag == 0) && (lastTime != newTime)) {
 		document.title = data[0].author + " spoke! It's probably important!";
 		lastTime = newTime = data[0].timestamp;
+        $('#chatResults').prop('scrollTop', $('#chatResults').prop('scrollHeight'));	
 	}
    }
  });
